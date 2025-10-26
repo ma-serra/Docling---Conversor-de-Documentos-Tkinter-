@@ -1,0 +1,105 @@
+╔══════════════════════════════════════════════════════════════╗
+║                  ONDE ESTÁ O PROJETO?                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+📍 LOCALIZAÇÕES POSSÍVEIS:
+
+1. Se você clonou do GitHub:
+   ~/Docling---Conversor-de-Documentos-Tkinter-
+   ou
+   C:\Users\SeuNome\Docling---Conversor-de-Documentos-Tkinter-
+
+2. GitHub (para baixar):
+   https://github.com/ma-serra/Docling---Conversor-de-Documentos-Tkinter-
+
+╔══════════════════════════════════════════════════════════════╗
+║              COMO BAIXAR E EXECUTAR (RÁPIDO)                 ║
+╚══════════════════════════════════════════════════════════════╝
+
+PASSO 1: Baixar
+━━━━━━━━━━━━━━━
+Opção A (Com Git):
+  git clone https://github.com/ma-serra/Docling---Conversor-de-Documentos-Tkinter-.git
+
+Opção B (Sem Git):
+  1. Acesse: https://github.com/ma-serra/Docling---Conversor-de-Documentos-Tkinter-
+  2. Clique no botão verde "Code"
+  3. Clique em "Download ZIP"
+  4. Extraia o arquivo ZIP
+
+PASSO 2: Entrar na pasta
+━━━━━━━━━━━━━━━━━━━━━━━━
+  cd Docling---Conversor-de-Documentos-Tkinter-
+
+PASSO 3: Instalar dependências
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  pip install beautifulsoup4 lxml
+
+PASSO 4: Executar!
+━━━━━━━━━━━━━━━━━
+  python app_legal.py
+
+╔══════════════════════════════════════════════════════════════╗
+║                    VERIFICAR SE ESTÁ CERTO                   ║
+╚══════════════════════════════════════════════════════════════╝
+
+Depois de entrar na pasta, liste os arquivos:
+
+  ls            (Mac/Linux)
+  dir           (Windows)
+
+Você deve ver:
+  ✓ app_legal.py
+  ✓ template_manager.py
+  ✓ templates/
+  ✓ GUIA_USO.md
+
+Se vir esses arquivos, está no lugar certo!
+
+╔══════════════════════════════════════════════════════════════╗
+║                  AINDA NÃO ENCONTROU?                        ║
+╚══════════════════════════════════════════════════════════════╝
+
+PROCURAR NO COMPUTADOR:
+
+Windows (PowerShell):
+  dir "app_legal.py" /s /b
+
+Mac/Linux (Terminal):
+  find ~ -name "app_legal.py"
+
+╔══════════════════════════════════════════════════════════════╗
+║                      ATALHO COMPLETO                         ║
+╚══════════════════════════════════════════════════════════════╝
+
+Cole isto no terminal (tudo de uma vez):
+
+# Criar pasta de trabalho
+mkdir -p ~/MeusProjetos && cd ~/MeusProjetos
+
+# Baixar projeto
+git clone https://github.com/ma-serra/Docling---Conversor-de-Documentos-Tkinter-.git
+
+# Entrar na pasta
+cd Docling---Conversor-de-Documentos-Tkinter-
+
+# Instalar
+pip install beautifulsoup4 lxml
+
+# Executar
+python app_legal.py
+
+╔══════════════════════════════════════════════════════════════╗
+║                         RESULTADO                            ║
+╚══════════════════════════════════════════════════════════════╝
+
+Uma janela vai abrir com:
+  - 3 abas: Conversor | Gerador | Diagnóstico
+  - Selecione "Gerador"
+  - Escolha "Confissão de Dívida"
+  - Preencha os campos
+  - Clique em "Gerar e Salvar"
+
+Pronto! 🎉
+
+════════════════════════════════════════════════════════════════
