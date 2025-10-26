@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confissão de Dívida</title>
+<style>
+        :root {
+            /* PALETA MONOCROMÁTICA */
+            --cor-primaria: #1a1a1a;
+            --cor-secundaria: #333333;
+            --cor-texto: #2a2a2a;
+            --cor-texto-secundario: #666666;
+            --cor-texto-claro: #888888;
+
+            /* FUNDOS */
+            --fundo-principal: #ffffff;
+            --fundo-secundario: #fafafa;
+            --fundo-destaque: #f5f5f5;
+
+            /* BORDAS */
+            --borda-principal: #e0e0e0;
+            --borda-sutil: #f0f0f0;
+
+            /* ESPAÇAMENTOS */
+            --espaco-sm: 16px;
+            --espaco-md: 24px;
+            --espaco-lg: 32px;
+            --espaco-xl: 48px;
+            --espaco-xxl: 64px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Times New Roman', serif;
+            line-height: 1.7;
+            color: var(--cor-texto);
+            background: var(--fundo-secundario);
+            font-size: 14px;
+        }
+
+        .documento-container {
+            max-width: 21cm;
+            margin: var(--espaco-xl) auto;
+            background: var(--fundo-principal);
+            padding: 2cm;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        /* CABEÇALHO */
+        .cabecalho {
+            text-align: center;
+            padding-bottom: var(--espaco-lg);
+            border-bottom: 1px solid var(--borda-principal);
+            margin-bottom: var(--espaco-xxl);
+        }
+
+        .titulo-documento {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--cor-primaria);
+            letter-spacing: -0.5px;
+            margin-bottom: var(--espaco-sm);
+        }
+
+        .subtitulo-documento {
+            font-size: 14px;
+            color: var(--cor-texto-secundario);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CORPO DO DOCUMENTO */
+        .secao {
+            margin-bottom: var(--espaco-xxl);
+        }
+
+        .secao-titulo {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--cor-primaria);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: var(--espaco-lg);
+            padding-bottom: var(--espaco-sm);
+            border-bottom: 1px solid var(--borda-sutil);
+        }
+
+        .paragrafo {
+            font-size: 14px;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: var(--espaco-md);
+        }
+
+        /* CAMPOS INTEGRADOS NATURALMENTE */
+        .campo-variavel {
+            display: inline;
+            font-weight: 500;
+            color: var(--cor-primaria);
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s ease;
+        }
+
+        .campo-destaque {
+            font-weight: 600;
+            color: var(--cor-primaria);
+        }
+
+        /* TABELA DE VALORES */
+        .tabela-valores {
+            width: 100%;
+            border-collapse: collapse;
+            margin: var(--espaco-lg) 0;
+            border: 1px solid var(--borda-principal);
+        }
+
+        .tabela-valores th {
+            background: var(--fundo-destaque);
+            padding: var(--espaco-sm);
+            text-align: left;
+            font-weight: 600;
+            font-size: 11px;
+            color: var(--cor-primaria);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid var(--borda-principal);
+        }
+
+        .tabela-valores td {
+            padding: var(--espaco-sm);
+            border-bottom: 1px solid var(--borda-sutil);
+        }
+
+        .tabela-valores tr:last-child td {
+            border-bottom: none;
+        }
+
+        .tabela-valores tr:nth-child(even) {
+            background: var(--fundo-secundario);
+        }
+
+        .valor-total {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--cor-primaria);
+        }
+
+        /* CLÁUSULAS */
+        .clausula {
+            margin-bottom: var(--espaco-lg);
+        }
+
+        .clausula-numero {
+            font-weight: 600;
+            color: var(--cor-primaria);
+            margin-bottom: var(--espaco-sm);
+        }
+
+        .clausula-texto {
+            font-size: 14px;
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* CRONOGRAMA */
+        .cronograma-item {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--espaco-sm) 0;
+            border-bottom: 1px solid var(--borda-sutil);
+        }
+
+        .cronograma-item:last-child {
+            border-bottom: none;
+        }
+
+        /* ASSINATURAS */
+        .assinaturas {
+            margin-top: var(--espaco-xxl);
+            padding-top: var(--espaco-xl);
+        }
+
+        .assinatura-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--espaco-xxl);
+            margin-top: var(--espaco-xl);
+        }
+
+        .assinatura-box {
+            text-align: center;
+        }
+
+        .assinatura-linha {
+            border-top: 1px solid var(--cor-primaria);
+            margin-bottom: var(--espaco-sm);
+            padding-top: var(--espaco-xxl);
+        }
+
+        .assinatura-nome {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 4px;
+            color: var(--cor-primaria);
+        }
+
+        .assinatura-documento {
+            font-size: 11px;
+            color: var(--cor-texto-secundario);
+        }
+
+        /* RODAPÉ */
+        .rodape {
+            margin-top: var(--espaco-xxl);
+            padding-top: var(--espaco-lg);
+            border-top: 1px solid var(--borda-sutil);
+            text-align: center;
+            font-size: 11px;
+            color: var(--cor-texto-claro);
+        }
+
+        /* IMPRESSÃO */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .documento-container {
+                box-shadow: none;
+                margin: 0;
+                max-width: none;
+            }
+        }
+
+        /* RESPONSIVIDADE */
+        @media (max-width: 768px) {
+            .documento-container {
+                padding: var(--espaco-lg);
+                margin: var(--espaco-md);
+            }
+
+            .assinatura-grid {
+                grid-template-columns: 1fr;
+                gap: var(--espaco-lg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="documento-container">
+<!-- CABEÇALHO -->
+<div class="cabecalho">
+<h1 class="titulo-documento">Confissão de Dívida</h1>
+<p class="subtitulo-documento">Instrumento Particular</p>
+</div>
+<!-- QUALIFICAÇÃO DAS PARTES -->
+<div class="secao">
+<h2 class="secao-titulo">Das Partes</h2>
+<p class="paragrafo">
+<span class="campo-destaque">CREDOR:</span> <span class="campo-variavel" data-field="credor_nome">ESCRITÓRIO XYZ ADVOCACIA LTDA</span>, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº <span class="campo-variavel" data-field="credor_cnpj">11.222.333/0001-44</span>, com sede na <span class="campo-variavel" data-field="credor_endereco">Rua Exemplo, 999, São Paulo/SP, CEP 01000-000</span>, neste ato representada por seu sócio administrador <span class="campo-variavel" data-field="credor_representante">Dr. Carlos Alberto</span>, brasileiro, empresário, portador da cédula de identidade RG nº <span class="campo-variavel" data-field="credor_rg">11.222.333-4 SSP/SP</span>, inscrito no CPF sob o nº <span class="campo-variavel" data-field="credor_cpf">111.222.333-44</span>.
+            </p>
+<p class="paragrafo">
+<span class="campo-destaque">DEVEDOR:</span> <span class="campo-variavel" data-field="devedor_nome">JOSÉ DA SILVA SANTOS</span>, brasileira, solteira, empresária, portadora da cédula de identidade RG nº <span class="campo-variavel" data-field="devedor_rg">99.888.777-6 SSP/SP</span>, inscrita no CPF sob o nº <span class="campo-variavel" data-field="devedor_cpf">999.888.777-66</span>, residente e domiciliada na <span class="campo-variavel" data-field="devedor_endereco">Av. Principal, 123, Apto 45, São Paulo/SP, CEP 02000-000</span>.
+            </p>
+</div>
+<!-- OBJETO DA CONFISSÃO -->
+<div class="secao">
+<h2 class="secao-titulo">Do Objeto</h2>
+<p class="paragrafo">
+                Por este instrumento particular, o <span class="campo-destaque">DEVEDOR</span> reconhece e confessa dever ao <span class="campo-destaque">CREDOR</span> a quantia líquida, certa e exigível de <span class="campo-destaque campo-variavel" data-field="valor_total">R$ 100.000,00 (cem mil reais)</span>, referente a <span class="campo-variavel" data-field="motivo_divida">prestação de serviços jurídicos entre janeiro e dezembro de 2024</span>, conforme contratos e notas fiscais devidamente emitidas e não quitadas.
+            </p>
+</div>
+<!-- DISCRIMINAÇÃO DOS VALORES -->
+<div class="secao">
+<h2 class="secao-titulo">Discriminação dos Valores</h2>
+<table class="tabela-valores">
+<thead>
+<tr>
+<th>Descrição</th>
+<th style="text-align: right; width: 150px;">Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Serviços de Consultoria - Jan a Mar/2024</td>
+<td style="text-align: right;">R$ 45.000,00</td>
+</tr>
+<tr>
+<td>Serviços de Consultoria - Abr a Jun/2024</td>
+<td style="text-align: right;">R$ 45.000,00</td>
+</tr>
+<tr>
+<td>Serviços de Consultoria - Jul a Set/2024</td>
+<td style="text-align: right;">R$ 45.000,00</td>
+</tr>
+<tr>
+<td>Juros de Mora (2% a.m.)</td>
+<td style="text-align: right;">R$ 9.000,00</td>
+</tr>
+<tr>
+<td>Multa Contratual (2%)</td>
+<td style="text-align: right;">R$ 3.000,00</td>
+</tr>
+<tr style="background: var(--fundo-destaque);">
+<td><strong>VALOR TOTAL</strong></td>
+<td class="valor-total" style="text-align: right;">R$ 147.000,00</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- CLÁUSULAS -->
+<div class="secao">
+<h2 class="secao-titulo">Das Condições</h2>
+<div class="clausula">
+<div class="clausula-numero">CLÁUSULA 1ª - DO PAGAMENTO</div>
+<p class="clausula-texto">
+                    O <span class="campo-destaque">DEVEDOR</span> compromete-se a quitar o valor total confessado em <span class="campo-variavel campo-destaque" data-field="num_parcelas">20 (vinte)</span> parcelas mensais, iguais e consecutivas, no valor de <span class="campo-variavel campo-destaque" data-field="valor_parcela">R$ 5.000,00 (cinco mil reais)</span> cada, vencendo-se a primeira parcela em <span class="campo-variavel campo-destaque" data-field="data_primeira_parcela">15 de novembro de 2025</span> e as demais no mesmo dia dos meses subsequentes.
+                </p>
+</div>
+<div class="clausula">
+<div class="clausula-numero">CLÁUSULA 2ª - DO VENCIMENTO ANTECIPADO</div>
+<p class="clausula-texto">
+                    O não pagamento de qualquer parcela na data do respectivo vencimento acarretará o vencimento antecipado da dívida, tornando-se exigível o saldo devedor remanescente, acrescido de juros de mora de <span class="campo-variavel" data-field="juros_mora">1,5% ao mês</span>, multa de <span class="campo-variavel" data-field="multa_atraso">2%</span> sobre o valor em atraso, e correção monetária pelo IPCA.
+                </p>
+</div>
+<div class="clausula">
+<div class="clausula-numero">CLÁUSULA 3ª - DA FORMA DE PAGAMENTO</div>
+<p class="clausula-texto">
+                    Os pagamentos deverão ser efetuados mediante depósito ou transferência bancária para a conta corrente do <span class="campo-destaque">CREDOR</span>, <span class="campo-variavel" data-field="dados_bancarios">Banco Itaú, Agência 1234, Conta Corrente 56789-0</span>, ou através de boleto bancário a ser enviado pelo credor com antecedência mínima de 5 (cinco) dias úteis do vencimento.
+                </p>
+</div>
+<div class="clausula">
+<div class="clausula-numero">CLÁUSULA 4ª - DAS DISPOSIÇÕES GERAIS</div>
+<p class="clausula-texto">
+                    Este instrumento constitui título executivo extrajudicial, nos termos do artigo 784, inciso III, do Código de Processo Civil, podendo o <span class="campo-destaque">CREDOR</span> promover a execução judicial em caso de inadimplemento, independentemente de protesto ou notificação prévia.
+                </p>
+</div>
+<div class="clausula">
+<div class="clausula-numero">CLÁUSULA 5ª - DO FORO</div>
+<p class="clausula-texto">
+                    As partes elegem o foro da Comarca de <span class="campo-variavel" data-field="foro">São Paulo/SP</span> para dirimir quaisquer questões oriundas deste instrumento, renunciando a qualquer outro, por mais privilegiado que seja.
+                </p>
+</div>
+</div>
+<!-- CRONOGRAMA DE PAGAMENTO -->
+<div class="secao">
+<h2 class="secao-titulo">Cronograma de Pagamento</h2>
+<div class="cronograma-item">
+<span>Parcela 01/12</span>
+<span>15/02/2025 - R$ 12.250,00</span>
+</div>
+<div class="cronograma-item">
+<span>Parcela 02/12</span>
+<span>15/03/2025 - R$ 12.250,00</span>
+</div>
+<div class="cronograma-item">
+<span>Parcela 03/12</span>
+<span>15/04/2025 - R$ 12.250,00</span>
+</div>
+<div class="cronograma-item">
+<span>Parcelas 04 a 12</span>
+<span>Mensais - R$ 12.250,00 cada</span>
+</div>
+<div class="cronograma-item" style="font-weight: 600; background: var(--fundo-destaque);">
+<span>TOTAL</span>
+<span>R$ 147.000,00</span>
+</div>
+</div>
+<!-- DECLARAÇÕES -->
+<div class="secao">
+<p class="paragrafo">
+                E por estarem assim justas e contratadas, as partes firmam o presente instrumento em 2 (duas) vias de igual teor e forma, na presença de 2 (duas) testemunhas, para que produza seus jurídicos e legais efeitos.
+            </p>
+</div>
+<!-- LOCAL E DATA -->
+<div class="secao">
+<p class="paragrafo" style="text-align: center; font-weight: 500;">
+<span class="campo-variavel" data-field="cidade">São Paulo/SP</span>, <span class="campo-variavel" data-field="data_assinatura">26 de outubro de 2025</span>.
+            </p>
+</div>
+<!-- ASSINATURAS -->
+<div class="assinaturas">
+<div class="assinatura-grid">
+<div class="assinatura-box">
+<div class="assinatura-linha"></div>
+<div class="assinatura-nome">EMPRESA XYZ LTDA</div>
+<div class="assinatura-documento">CNPJ 12.345.678/0001-90</div>
+<div class="assinatura-documento">CREDOR</div>
+</div>
+<div class="assinatura-box">
+<div class="assinatura-linha"></div>
+<div class="assinatura-nome">MARIA DOS SANTOS</div>
+<div class="assinatura-documento">CPF 987.654.321-00</div>
+<div class="assinatura-documento">DEVEDOR</div>
+</div>
+</div>
+<div class="assinatura-grid" style="margin-top: var(--espaco-xxl);">
+<div class="assinatura-box">
+<div class="assinatura-linha"></div>
+<div class="assinatura-nome">TESTEMUNHA 1</div>
+<div class="assinatura-documento">Nome: _______________________</div>
+<div class="assinatura-documento">CPF: _______________________</div>
+</div>
+<div class="assinatura-box">
+<div class="assinatura-linha"></div>
+<div class="assinatura-nome">TESTEMUNHA 2</div>
+<div class="assinatura-documento">Nome: _______________________</div>
+<div class="assinatura-documento">CPF: _______________________</div>
+</div>
+</div>
+</div>
+<!-- RODAPÉ -->
+<div class="rodape">
+<p>Documento elaborado em conformidade com o Código Civil Brasileiro (Lei 10.406/2002)</p>
+<p>e Código de Processo Civil (Lei 13.105/2015)</p>
+</div>
+</div>
+</body>
+</html>
