@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Rápido para Moradores</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 300;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .guia-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .guia-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-header {
+            background-color: #34495e;
+            color: #ffffff;
+            padding: 20px;
+            font-size: 1.4rem;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .rules-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .rules-list li {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 0;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .rules-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rule-icon {
+            margin-right: 15px;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .icon-permitido {
+            color: #27ae60;
+        }
+
+        .icon-proibido {
+            color: #c0392b;
+        }
+
+        .rule-text {
+            flex: 1;
+        }
+
+        .rule-description {
+            display: block;
+            font-size: 1rem;
+            color: #34495e;
+        }
+
+        .rule-details {
+            display: block;
+            font-size: 0.85rem;
+            color: #95a5a6;
+            margin-top: 4px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #ecf0f1;
+        }
+
+        h3:first-child {
+            margin-top: 0;
+        }
+
+        /* Gemini Assistant Styles */
+        .assistant-input-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .assistant-input {
+            flex-grow: 1;
+            border: 1px solid #dfe6e9;
+            border-radius: 5px;
+            padding: 12px;
+            font-size: 1rem;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .assistant-button {
+            background-color: #34495e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 0 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .assistant-button:hover {
+            background-color: #2c3e50;
+        }
+
+        .assistant-response {
+            background-color: #f8f9fa;
+            border-left: 4px solid #34495e;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 0 5px 5px 0;
+            color: #34495e;
+            min-height: 50px;
+        }
+
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #34495e;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Guia Rápido do Morador</h1>
+            <p>As principais regras para uma convivência harmoniosa.</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="guia-card">
+                <div class="card-header">Convivência Geral</div>
+                <div class="card-content">
+                    <h3>Obrigatório</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Respeitar o silêncio das 22h às 8h.</span>
+                                <span class="rule-details">Evite ruídos que perturbem os vizinhos.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Manter a boa convivência e o respeito mútuo.</span>
+                                <span class="rule-details">Zele pela harmonia entre todos.</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <h3>Proibido</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Usar substâncias ilícitas nas áreas do condomínio.</span>
+                                <span class="rule-details">Válido para todas as áreas, comuns ou privativas.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Perturbar a tranquilidade com festas ou música alta.</span>
+                                <span class="rule-details">O bom senso no volume é essencial em qualquer horário.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guia-card">
+                <div class="card-header">Áreas Comuns</div>
+                <div class="card-content">
+                    <h3>Obrigatório</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Crianças menores de 12 anos devem estar acompanhadas.</span>
+                                <span class="rule-details">Especialmente em garagens, piscinas e elevadores.</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <h3>Proibido</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Deixar objetos pessoais em corredores, halls ou escadas.</span>
+                                <span class="rule-details">Mantenha as áreas de passagem livres.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Pisar nos jardins ou remover plantas.</span>
+                                <span class="rule-details">Preserve o paisagismo do condomínio.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Usar bolas, skates, patins ou bicicletas fora das áreas designadas.</span>
+                                <span class="rule-details">Evite acidentes e danos ao patrimônio.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guia-card">
+                <div class="card-header">Sua Unidade</div>
+                <div class="card-content">
+                    <h3>Permitido (com regras)</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Realizar reformas internas.</span>
+                                <span class="rule-details">Requer anuência do síndico e apresentação de ART/RRT.</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <h3>Proibido</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Estender roupas ou toalhas em janelas e sacadas.</span>
+                                <span class="rule-details">Mantém a estética da fachada.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Colocar vasos ou objetos nos parapeitos com risco de queda.</span>
+                                <span class="rule-details">A segurança de todos é prioridade.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Utilizar a unidade para fins comerciais.</span>
+                                <span class="rule-details">O uso é estritamente residencial.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guia-card">
+                <div class="card-header">Garagem</div>
+                <div class="card-content">
+                    <h3>Obrigatório</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Estacionar exclusivamente na sua vaga demarcada.</span>
+                                <span class="rule-details">Respeite os limites e a vaga dos vizinhos.</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <h3>Proibido</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Lavar ou realizar reparos mecânicos nos veículos.</span>
+                                <span class="rule-details">Pequenos reparos de emergência são exceção.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Ceder ou alugar a vaga para não moradores.</span>
+                                <span class="rule-details">O uso é exclusivo dos condôminos.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Usar a vaga como depósito de objetos.</span>
+                                <span class="rule-details">O espaço é destinado apenas a veículos.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guia-card">
+                <div class="card-header">Lixo e Resíduos</div>
+                <div class="card-content">
+                    <h3>Obrigatório</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Acondicionar o lixo em sacos plásticos bem fechados.</span>
+                                <span class="rule-details">Deposite-os nos coletores corretos.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Separar o lixo reciclável do lixo orgânico.</span>
+                                <span class="rule-details">Siga as orientações de coleta seletiva.</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <h3>Proibido</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Descartar lixo pelas janelas ou em áreas comuns.</span>
+                                <span class="rule-details">Utilize sempre as lixeiras designadas.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-proibido">✗</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Descartar objetos que possam entupir o encanamento.</span>
+                                <span class="rule-details">Ex: Fraldas, absorventes, óleos, etc.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guia-card">
+                <div class="card-header">Mudanças e Entregas</div>
+                <div class="card-content">
+                    <h3>Obrigatório</h3>
+                    <ul class="rules-list">
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Agendar mudanças com a administração.</span>
+                                <span class="rule-details">Permite a proteção do elevador de serviço.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Realizar mudanças em horários permitidos.</span>
+                                <span class="rule-details">Consulte a administração sobre os horários.</span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="rule-icon icon-permitido">✓</span>
+                            <span class="rule-text">
+                                <span class="rule-description">Registrar prestadores de serviço na portaria.</span>
+                                <span class="rule-details">A segurança é responsabilidade de todos.</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="guia-card">
+                <div class="card-header">✨ Assistente Virtual Tira-Dúvidas</div>
+                <div class="card-content">
+                    <p class="rule-details" style="text-align: center; margin-bottom: 20px;">Tem alguma dúvida sobre as regras? Pergunte abaixo e a nossa inteligência artificial irá ajudar!</p>
+
+                    <div class="assistant-input-group">
+                        <input type="text" id="userInput" class="assistant-input" placeholder="Ex: Posso ter animais de estimação?">
+                        <button id="askButton" class="assistant-button">Perguntar</button>
+                    </div>
+
+                    <div id="loader" class="loader"></div>
+
+                    <div id="apiResponse" class="assistant-response">
+                        Sua resposta aparecerá aqui...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const askButton = document.getElementById('askButton');
+            const userInput = document.getElementById('userInput');
+
+            const handleQuery = () => {
+                const query = userInput.value;
+                if (query.trim()) {
+                    callGemini(query);
+                }
+            };
+
+            askButton.addEventListener('click', handleQuery);
+            userInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    handleQuery();
+                }
+            });
+        });
+
+        function extractRulesFromDOM() {
+            let context = "";
+            const cards = document.querySelectorAll('.guia-card');
+            cards.forEach(card => {
+                const header = card.querySelector('.card-header');
+                if (header && !header.textContent.includes('Assistente')) {
+                    context += `\n\nSeção: ${header.textContent.trim()}\n`;
+                    const rules = card.querySelectorAll('.rules-list li');
+                    rules.forEach(rule => {
+                        const description = rule.querySelector('.rule-description')?.textContent.trim();
+                        const details = rule.querySelector('.rule-details')?.textContent.trim();
+                        if(description) {
+                            context += `- Regra: ${description}`;
+                            if(details) {
+                                context += ` (${details})\n`;
+                            } else {
+                                context += '\n';
+                            }
+                        }
+                    });
+                }
+            });
+            return context;
+        }
+
+        async function callGemini(query) {
+            const loader = document.getElementById('loader');
+            const responseContainer = document.getElementById('apiResponse');
+            const askButton = document.getElementById('askButton');
+
+            loader.style.display = 'block';
+            responseContainer.style.display = 'none';
+            askButton.disabled = true;
+
+            const apiKey = "{{GEMINI_API_KEY}}"; // Placeholder for API key
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const rulesContext = extractRulesFromDOM();
+            const systemPrompt = `Você é um assistente virtual de um condomínio. Responda à pergunta do usuário de forma clara, amigável e objetiva, baseando-se estritamente nas regras fornecidas a seguir. Se a resposta não estiver explicitamente nas regras, informe que não encontrou a informação no guia e sugira que o morador contate a administração. Regras do condomínio: ${rulesContext}`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: query }]
+                }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            let retries = 3;
+            let delay = 1000;
+            let success = false;
+
+            while (retries > 0 && !success) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const result = await response.json();
+                    const candidate = result.candidates?.[0];
+
+                    if (candidate && candidate.content?.parts?.[0]?.text) {
+                        responseContainer.textContent = candidate.content.parts[0].text;
+                    } else {
+                        responseContainer.textContent = 'Não foi possível obter uma resposta. Por favor, tente novamente.';
+                    }
+                    success = true;
+                } catch (error) {
+                    console.error('Error calling Gemini API:', error);
+                    retries--;
+                    if (retries > 0) {
+                        await new Promise(res => setTimeout(res, delay));
+                        delay *= 2;
+                    } else {
+                        responseContainer.textContent = 'Ocorreu um erro ao conectar com o assistente. Tente mais tarde.';
+                    }
+                }
+            }
+
+            loader.style.display = 'none';
+            responseContainer.style.display = 'block';
+            askButton.disabled = false;
+        }
+    </script>
+</body>
+</html>

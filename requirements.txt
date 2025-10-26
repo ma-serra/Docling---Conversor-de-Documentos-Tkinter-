@@ -1,8 +1,9 @@
-tkinter
-ttk
-filedialog
-messagebox
-json
-threading
-os
+# Docling - Conversor de Documentos
 docling
+
+# Template Management
+beautifulsoup4
+lxml
+
+# PDF Export (opcional)
+# weasyprint  # Descomentar se quiser exportar para PDF
