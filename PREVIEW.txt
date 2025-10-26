@@ -1,0 +1,193 @@
+═══════════════════════════════════════════════════════════════
+        PREVIEW: O QUE CADA COMANDO ABRE
+═══════════════════════════════════════════════════════════════
+
+1️⃣  python demo_template.py
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TIPO: Script de terminal (não abre janela)
+   MOSTRA: Texto no terminal com demonstração
+   CRIA: Arquivos de exemplo em output_examples/
+
+   SAÍDA:
+   ┌─────────────────────────────────────────────────┐
+   │ ============================================    │
+   │ DEMONSTRAÇÃO DO SISTEMA DE TEMPLATES           │
+   │ ============================================    │
+   │                                                 │
+   │ 📋 TEMPLATES DISPONÍVEIS:                      │
+   │ 1. Confissão de Dívida (21 campos)            │
+   │ 2. Guia do Morador (0 campos)                 │
+   │                                                 │
+   │ ✓ Validando dados...                           │
+   │ ✓ Documento salvo em output_examples/          │
+   │ ✅ DEMONSTRAÇÃO CONCLUÍDA!                     │
+   └─────────────────────────────────────────────────┘
+
+
+2️⃣  python app_legal.py
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TIPO: Interface gráfica Tkinter (abre janela)
+   TAMANHO: 1400x850 pixels
+   FUNCIONALIDADE: Sistema completo com 3 abas
+
+   JANELA:
+   ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+   ┃ Docling Legal - Sistema de Documentos         [_][□][X]┃
+   ┣━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┫
+   ┃                                                      ┃
+   ┃  ┌──────────┐ ┌──────────┐ ┌───────────────┐      ┃
+   ┃  │📄 Converter│📝 Gerador │⚖️ Diagnóstico │      ┃
+   ┃  └──────────┘ └──────────┘ └───────────────┘      ┃
+   ┃  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   ┃
+   ┃                                                      ┃
+   ┃  📝 ABA: GERADOR DE DOCUMENTOS                      ┃
+   ┃                                                      ┃
+   ┃  Selecionar Template:                               ┃
+   ┃  ┌─────────────────────────────────────┐            ┃
+   ┃  │ Confissão de Dívida (21 campos)  ▼│ [Carregar] ┃
+   ┃  └─────────────────────────────────────┘            ┃
+   ┃                                                      ┃
+   ┃  Preencher Campos: (scroll para ver todos)          ┃
+   ┃  ┌──────────────────────────────────────────────┐   ┃
+   ┃  │                                              │   ┃
+   ┃  │ Credor Nome:    [EMPRESA XYZ LTDA        ] │   ┃
+   ┃  │ Credor CNPJ:    [12.345.678/0001-90      ] │   ┃
+   ┃  │ Credor Endereço:[Rua Exemplo, 123        ] │   ┃
+   ┃  │ Credor Rep.:    [João da Silva           ] │   ┃
+   ┃  │ Credor RG:      [12.345.678-9 SSP/SP     ] │   ┃
+   ┃  │ Credor CPF:     [123.456.789-00          ] │   ┃
+   ┃  │                                              │   ┃
+   ┃  │ Devedor Nome:   [MARIA DOS SANTOS        ] │   ┃
+   ┃  │ Devedor RG:     [98.765.432-1 SSP/SP     ] │   ┃
+   ┃  │ Devedor CPF:    [987.654.321-00          ] │   ┃
+   ┃  │ Devedor Endereço:[Av. Exemplo, 456       ] │   ┃
+   ┃  │                                              │   ┃
+   ┃  │ Valor Total:    [R$ 150.000,00           ] │   ┃
+   ┃  │ Motivo Dívida:  [serviços prestados...   ] │   ┃
+   ┃  │ Num Parcelas:   [12 (doze)               ] │   ┃
+   ┃  │ Valor Parcela:  [R$ 12.250,00            ] │   ┃
+   ┃  │ Data 1ª Parc.:  [15/02/2025              ] │   ┃
+   ┃  │                                              │   ┃
+   ┃  │ Juros Mora:     [2% ao mês               ] │   ┃
+   ┃  │ Multa Atraso:   [2%                      ] │   ┃
+   ┃  │ Dados Bancários:[Banco, Ag., Conta       ] │   ┃
+   ┃  │ Foro:           [São Paulo/SP            ] │   ┃
+   ┃  │ Cidade:         [São Paulo/SP            ] │   ┃
+   ┃  │ Data Assinatura:[17/10/2025             ] │   ┃
+   ┃  │                                              │   ┃
+   ┃  └──────────────────────────────────────────────┘   ┃
+   ┃                                                      ┃
+   ┃  ┌──────────────────────┐ ┌──────────────────────┐ ┃
+   ┃  │ Visualizar Documento │ │ Gerar e Salvar       │ ┃
+   ┃  └──────────────────────┘ └──────────────────────┘ ┃
+   ┃                                                      ┃
+   ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+
+3️⃣  Abrir HTML no Navegador
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TIPO: Documento HTML formatado
+   ABRE EM: Firefox/Chrome/Edge
+   CAMINHO: output_examples/confissao_divida_exemplo.html
+
+   VISUAL NO NAVEGADOR:
+   ┌───────────────────────────────────────────────────────┐
+   │ ◄ ► ⟳  🔒 file:///...confissao_divida_exemplo.html  │
+   ├───────────────────────────────────────────────────────┤
+   │                                                        │
+   │          Confissão de Dívida                          │
+   │          Instrumento Particular                       │
+   │                                                        │
+   │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+   │                                                        │
+   │  Das Partes                                           │
+   │                                                        │
+   │  CREDOR: ESCRITÓRIO XYZ ADVOCACIA LTDA, pessoa        │
+   │  jurídica de direito privado, inscrita no CNPJ        │
+   │  sob o nº 11.222.333/0001-44, com sede na Rua        │
+   │  Exemplo, 999, São Paulo/SP...                        │
+   │                                                        │
+   │  DEVEDOR: JOSÉ DA SILVA SANTOS, brasileira,          │
+   │  solteira, empresária, portadora da cédula de         │
+   │  identidade RG nº 99.888.777-6 SSP/SP...             │
+   │                                                        │
+   │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+   │                                                        │
+   │  Do Objeto                                            │
+   │                                                        │
+   │  Por este instrumento particular, o DEVEDOR           │
+   │  reconhece e confessa dever ao CREDOR a quantia       │
+   │  líquida, certa e exigível de R$ 100.000,00          │
+   │  (cem mil reais), referente a prestação de           │
+   │  serviços jurídicos entre janeiro e dezembro         │
+   │  de 2024...                                          │
+   │                                                        │
+   │  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  │
+   │                                                        │
+   │  Discriminação dos Valores                            │
+   │                                                        │
+   │  ┌────────────────────────────────┬──────────────┐   │
+   │  │ Descrição                      │ Valor        │   │
+   │  ├────────────────────────────────┼──────────────┤   │
+   │  │ Serviços Jan-Mar/2024         │ R$ 45.000,00│   │
+   │  │ Serviços Abr-Jun/2024         │ R$ 45.000,00│   │
+   │  │ Serviços Jul-Set/2024         │ R$ 45.000,00│   │
+   │  │ Juros de Mora (2% a.m.)       │ R$ 9.000,00 │   │
+   │  │ Multa Contratual (2%)         │ R$ 3.000,00 │   │
+   │  ├────────────────────────────────┼──────────────┤   │
+   │  │ VALOR TOTAL                    │ R$ 147.000,00│   │
+   │  └────────────────────────────────┴──────────────┘   │
+   │                                                        │
+   │  [... continua com cláusulas, assinaturas, etc.]     │
+   │                                                        │
+   └───────────────────────────────────────────────────────┘
+
+   RECURSOS:
+   ✓ Formatação profissional
+   ✓ Pronto para impressão
+   ✓ Pode ser salvo como PDF (Ctrl+P → Salvar como PDF)
+
+
+4️⃣  cat GUIA_USO.md
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   TIPO: Arquivo de texto Markdown
+   MOSTRA: Terminal com documentação completa
+   TAMANHO: ~800 linhas
+
+   CONTEÚDO:
+   ┌─────────────────────────────────────────────────┐
+   │ # 🎯 Guia Rápido de Uso - Docling Legal       │
+   │                                                 │
+   │ ## 🚀 Iniciando o Sistema                     │
+   │                                                 │
+   │ ### 1. Execute a aplicação:                    │
+   │ ```bash                                         │
+   │ python app_legal.py                            │
+   │ ```                                             │
+   │                                                 │
+   │ ### 2. A janela principal abrirá com 3 abas:  │
+   │ - 📄 Conversor de Documentos                   │
+   │ - 📝 Gerador de Documentos                     │
+   │ - ⚖️ Diagnóstico Jurídico                     │
+   │                                                 │
+   │ [... 800+ linhas de documentação detalhada ... ]│
+   └─────────────────────────────────────────────────┘
+
+
+═══════════════════════════════════════════════════════════════
+                      RESUMO RÁPIDO
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────┬────────────────┬──────────────────────────┐
+│ COMANDO         │ O QUE ABRE     │ TIPO                     │
+├─────────────────┼────────────────┼──────────────────────────┤
+│ demo_template.py│ Terminal       │ Texto/Demonstração       │
+│ app_legal.py    │ Janela GUI     │ Interface gráfica        │
+│ .html (browser) │ Navegador      │ Documento formatado      │
+│ GUIA_USO.md     │ Terminal       │ Documentação texto       │
+└─────────────────┴────────────────┴──────────────────────────┘
+
+RECOMENDAÇÃO: Comece com → python app_legal.py
+             (abre a interface gráfica completa)
+
+═══════════════════════════════════════════════════════════════
