@@ -5,5 +5,9 @@ docling
 beautifulsoup4
 lxml
 
+# Spreadsheet Conversion
+pandas
+openpyxl
+
 # PDF Export (opcional)
 # weasyprint  # Descomentar se quiser exportar para PDF
