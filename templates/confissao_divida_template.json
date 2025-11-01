@@ -1,0 +1,243 @@
+{
+    "name": "Confissão de Dívida",
+    "structure": [],
+    "styles": {
+        "inline": {
+            "th": [
+                {
+                    "text-align": "right",
+                    "width": "150px"
+                }
+            ],
+            "td": [
+                {
+                    "text-align": "right"
+                },
+                {
+                    "text-align": "right"
+                },
+                {
+                    "text-align": "right"
+                },
+                {
+                    "text-align": "right"
+                },
+                {
+                    "text-align": "right"
+                },
+                {
+                    "text-align": "right"
+                }
+            ],
+            "tr": [
+                {
+                    "background": "var(--fundo-destaque)"
+                }
+            ],
+            "div": [
+                {
+                    "font-weight": "600",
+                    "background": "var(--fundo-destaque)"
+                },
+                {
+                    "margin-top": "var(--espaco-xxl)"
+                }
+            ],
+            "p": [
+                {
+                    "text-align": "center",
+                    "font-weight": "500"
+                }
+            ]
+        },
+        "classes": {},
+        "fonts": [],
+        "colors": []
+    },
+    "layout": {
+        "type": "unknown",
+        "columns": 1,
+        "grid": true,
+        "flexbox": false
+    },
+    "fields": [
+        {
+            "id": "header_0",
+            "type": "header",
+            "label": "Título Nível 1",
+            "default": "Confissão de Dívida",
+            "style": {
+                "classes": "titulo-documento"
+            }
+        },
+        {
+            "id": "header_1",
+            "type": "header",
+            "label": "Título Nível 2",
+            "default": "Das Partes",
+            "style": {
+                "classes": "secao-titulo"
+            }
+        },
+        {
+            "id": "header_2",
+            "type": "header",
+            "label": "Título Nível 2",
+            "default": "Do Objeto",
+            "style": {
+                "classes": "secao-titulo"
+            }
+        },
+        {
+            "id": "header_3",
+            "type": "header",
+            "label": "Título Nível 2",
+            "default": "Discriminação dos Valores",
+            "style": {
+                "classes": "secao-titulo"
+            }
+        },
+        {
+            "id": "header_4",
+            "type": "header",
+            "label": "Título Nível 2",
+            "default": "Das Condições",
+            "style": {
+                "classes": "secao-titulo"
+            }
+        },
+        {
+            "id": "header_5",
+            "type": "header",
+            "label": "Título Nível 2",
+            "default": "Cronograma de Pagamento",
+            "style": {
+                "classes": "secao-titulo"
+            }
+        },
+        {
+            "id": "paragraph_0",
+            "type": "paragraph",
+            "label": "Parágrafo: Instrumento Particular...",
+            "default": "Instrumento Particular",
+            "style": {
+                "classes": "subtitulo-documento"
+            }
+        },
+        {
+            "id": "paragraph_1",
+            "type": "paragraph",
+            "label": "Parágrafo: CREDOR:EMPRESA XYZ LTDA, pesso...",
+            "default": "CREDOR:EMPRESA XYZ LTDA, pessoa jurídica de direito privado, inscrita no CNPJ sob o nº12.345.678/0001-90, com sede naRua Exemplo, 123, Bairro Centro, São Paulo/SP, CEP 01234-567, neste ato representada por seu sócio administradorJoão da Silva, brasileiro, empresário, portador da cédula de identidade RG nº12.345.678-9 SSP/SP, inscrito no CPF sob o nº123.456.789-00.",
+            "style": {
+                "classes": "paragrafo"
+            }
+        },
+        {
+            "id": "paragraph_2",
+            "type": "paragraph",
+            "label": "Parágrafo: DEVEDOR:MARIA DOS SANTOS, bras...",
+            "default": "DEVEDOR:MARIA DOS SANTOS, brasileira, solteira, empresária, portadora da cédula de identidade RG nº98.765.432-1 SSP/SP, inscrita no CPF sob o nº987.654.321-00, residente e domiciliada naAvenida Exemplo, 456, Apto 78, Bairro Jardins, São Paulo/SP, CEP 98765-432.",
+            "style": {
+                "classes": "paragrafo"
+            }
+        },
+        {
+            "id": "paragraph_3",
+            "type": "paragraph",
+            "label": "Parágrafo: Por este instrumento particula...",
+            "default": "Por este instrumento particular, oDEVEDORreconhece e confessa dever aoCREDORa quantia líquida, certa e exigível deR$ 150.000,00 (cento e cinquenta mil reais), referente aprestação de serviços de consultoria empresarial realizados no período de janeiro a dezembro de 2024, conforme contratos e notas fiscais devidamente emitidas e não quitadas.",
+            "style": {
+                "classes": "paragrafo"
+            }
+        },
+        {
+            "id": "paragraph_4",
+            "type": "paragraph",
+            "label": "Parágrafo: ODEVEDORcompromete-se a quitar...",
+            "default": "ODEVEDORcompromete-se a quitar o valor total confessado em12 (doze)parcelas mensais, iguais e consecutivas, no valor deR$ 12.250,00 (doze mil duzentos e cinquenta reais)cada, vencendo-se a primeira parcela em15 de fevereiro de 2025e as demais no mesmo dia dos meses subsequentes.",
+            "style": {
+                "classes": "clausula-texto"
+            }
+        },
+        {
+            "id": "paragraph_5",
+            "type": "paragraph",
+            "label": "Parágrafo: O não pagamento de qualquer pa...",
+            "default": "O não pagamento de qualquer parcela na data do respectivo vencimento acarretará o vencimento antecipado da dívida, tornando-se exigível o saldo devedor remanescente, acrescido de juros de mora de2% ao mês, multa de2%sobre o valor em atraso, e correção monetária pelo IPCA.",
+            "style": {
+                "classes": "clausula-texto"
+            }
+        },
+        {
+            "id": "paragraph_6",
+            "type": "paragraph",
+            "label": "Parágrafo: Os pagamentos deverão ser efet...",
+            "default": "Os pagamentos deverão ser efetuados mediante depósito ou transferência bancária para a conta corrente doCREDOR,Banco Exemplo, Agência 1234, Conta Corrente 56789-0, ou através de boleto bancário a ser enviado pelo credor com antecedência mínima de 5 (cinco) dias úteis do vencimento.",
+            "style": {
+                "classes": "clausula-texto"
+            }
+        },
+        {
+            "id": "paragraph_7",
+            "type": "paragraph",
+            "label": "Parágrafo: Este instrumento constitui tít...",
+            "default": "Este instrumento constitui título executivo extrajudicial, nos termos do artigo 784, inciso III, do Código de Processo Civil, podendo oCREDORpromover a execução judicial em caso de inadimplemento, independentemente de protesto ou notificação prévia.",
+            "style": {
+                "classes": "clausula-texto"
+            }
+        },
+        {
+            "id": "paragraph_8",
+            "type": "paragraph",
+            "label": "Parágrafo: As partes elegem o foro da Com...",
+            "default": "As partes elegem o foro da Comarca deSão Paulo/SPpara dirimir quaisquer questões oriundas deste instrumento, renunciando a qualquer outro, por mais privilegiado que seja.",
+            "style": {
+                "classes": "clausula-texto"
+            }
+        },
+        {
+            "id": "paragraph_9",
+            "type": "paragraph",
+            "label": "Parágrafo: E por estarem assim justas e c...",
+            "default": "E por estarem assim justas e contratadas, as partes firmam o presente instrumento em 2 (duas) vias de igual teor e forma, na presença de 2 (duas) testemunhas, para que produza seus jurídicos e legais efeitos.",
+            "style": {
+                "classes": "paragrafo"
+            }
+        },
+        {
+            "id": "paragraph_10",
+            "type": "paragraph",
+            "label": "Parágrafo: São Paulo/SP,17 de outubro de ...",
+            "default": "São Paulo/SP,17 de outubro de 2025.",
+            "style": {
+                "text-align": "center",
+                "font-weight": "500",
+                "classes": "paragrafo"
+            }
+        },
+        {
+            "id": "paragraph_11",
+            "type": "paragraph",
+            "label": "Parágrafo: Documento elaborado em conform...",
+            "default": "Documento elaborado em conformidade com o Código Civil Brasileiro (Lei 10.406/2002)",
+            "style": {}
+        },
+        {
+            "id": "paragraph_12",
+            "type": "paragraph",
+            "label": "Parágrafo: e Código de Processo Civil (Le...",
+            "default": "e Código de Processo Civil (Lei 13.105/2015)",
+            "style": {}
+        },
+        {
+            "id": "table_0",
+            "type": "table",
+            "label": "Tabela 7x2",
+            "default": "",
+            "style": {
+                "classes": "tabela-valores"
+            }
+        }
+    ]
+}
