@@ -90,7 +90,7 @@ R$ 147.000,00
 
 E por estarem assim justas e contratadas, as partes firmam o presente instrumento em 2 (duas) vias de igual teor e forma, na presença de 2 (duas) testemunhas, para que produza seus jurídicos e legais efeitos.
 
-São Paulo/SP, 26/10/2025.
+São Paulo/SP, 18/11/2025.
 
 EMPRESA XYZ LTDA
 
