@@ -1,0 +1,186 @@
+╔══════════════════════════════════════════════════════════════════╗
+║                    AQUI ESTÃO TODOS OS SISTEMAS!                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+📍 LOCALIZAÇÃO: /home/user/Docling---Conversor-de-Documentos-Tkinter-
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 MENU PRINCIPAL (NOVO!)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Execute ESTE comando para ver todos os sistemas:
+
+    python menu_principal.py
+
+Você verá um menu com todas as opções!
+
+═══════════════════════════════════════════════════════════════════
+
+📊 SISTEMAS DISPONÍVEIS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  ANÁLISE E CONVERSÃO PARA PLANILHA (NOVO!)
+    ✓ Converte documentos em Excel/CSV
+    ✓ Preview interativo de dados
+    ✓ Múltiplas tabelas em abas
+
+    Execute: python app_analise_planilha.py
+    Docs: CONVERSAO_PLANILHA.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2️⃣  CLONAGEM DE FORMATAÇÃO (NOVO!)
+    ✓ Clona layout de documentos existentes
+    ✓ Interface dividida (doc | template)
+    ✓ Seleciona texto e preenche campos
+
+    Execute: python app_clone_documentos.py
+    Docs: SISTEMA_CLONAGEM.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3️⃣  GERADOR DE DOCUMENTOS JURÍDICOS
+    ✓ Templates predefinidos
+    ✓ Confissão de Dívida (21 campos)
+    ✓ Guia do Morador
+
+    Execute: python app_legal.py
+    Docs: README_LEGAL.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4️⃣  CONVERSOR SIMPLES
+    ✓ PDF/DOCX → Markdown/JSON
+    ✓ Interface gráfica simples
+    ✓ App original
+
+    Execute: python app_tkinter.py
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5️⃣  GERADOR RÁPIDO (Terminal)
+    ✓ Gera documento em 1 comando
+    ✓ Sem interface gráfica
+    ✓ Dados pré-preenchidos
+
+    Execute: python gerar_rapido.py
+    Docs: COMO_USAR_SIMPLES.md
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6️⃣  VALIDAÇÃO DO SISTEMA
+    ✓ Testa se tudo funciona
+    ✓ Verifica arquivos
+    ✓ Valida sintaxe
+
+    Execute: python validate_system.py
+
+═══════════════════════════════════════════════════════════════════
+
+⚡ EXECUÇÃO RÁPIDA
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Quer o mais RÁPIDO? Execute:
+
+    python menu_principal.py
+
+Ou escolha direto:
+
+    python app_analise_planilha.py      ← Conversão para planilha
+    python app_clone_documentos.py      ← Clonagem de formatação
+    python app_legal.py                 ← Gerador de documentos
+    python gerar_rapido.py              ← Geração rápida
+
+═══════════════════════════════════════════════════════════════════
+
+📁 ESTRUTURA DE ARQUIVOS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+SISTEMAS:
+  ✓ menu_principal.py             ← MENU INTERATIVO
+  ✓ app_analise_planilha.py       ← Conversão planilha
+  ✓ app_clone_documentos.py       ← Clonagem formatação
+  ✓ app_legal.py                  ← Templates jurídicos
+  ✓ app_tkinter.py                ← Conversor original
+  ✓ gerar_rapido.py               ← Gerador rápido
+  ✓ validate_system.py            ← Validação
+
+MÓDULOS:
+  ✓ template_manager.py           ← Gerenciador de templates
+  ✓ document_analyzer.py          ← Analisador de documentos
+  ✓ document_to_spreadsheet.py    ← Conversor para planilha
+  ✓ demo_template.py              ← Demonstração
+
+TEMPLATES:
+  ✓ templates/confissao_divida.html
+  ✓ templates/guia_morador.html
+  ✓ templates/templates_config.json
+
+DOCUMENTAÇÃO:
+  ✓ AQUI_ESTAO_OS_SISTEMAS.txt    ← Este arquivo
+  ✓ CONVERSAO_PLANILHA.md         ← Guia conversão planilha
+  ✓ SISTEMA_CLONAGEM.md           ← Guia clonagem
+  ✓ COMO_USAR_SIMPLES.md          ← Guia rápido
+  ✓ GUIA_USO.md                   ← Guia completo
+  ✓ README_LEGAL.md               ← Documentação técnica
+  ✓ PREVIEW.txt                   ← O que cada comando abre
+
+═══════════════════════════════════════════════════════════════════
+
+💻 NO SEU COMPUTADOR
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Clone ou baixe do GitHub:
+   git clone https://github.com/ma-serra/Docling---Conversor-de-Documentos-Tkinter-.git
+
+2. Entre na pasta:
+   cd Docling---Conversor-de-Documentos-Tkinter-
+
+3. Instale dependências:
+   pip install beautifulsoup4 lxml pandas openpyxl
+
+4. Execute o menu:
+   python menu_principal.py
+
+5. Escolha o sistema que quer usar!
+
+═══════════════════════════════════════════════════════════════════
+
+🎯 QUAL USAR?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+┌────────────────────────┬──────────────────────────────────────┐
+│ VOCÊ QUER              │ USE                                  │
+├────────────────────────┼──────────────────────────────────────┤
+│ Converter em Excel/CSV │ app_analise_planilha.py             │
+│ Clonar formatação doc  │ app_clone_documentos.py             │
+│ Usar templates prontos │ app_legal.py                        │
+│ Só converter formato   │ app_tkinter.py                      │
+│ Gerar rápido (1 cmd)   │ gerar_rapido.py                     │
+│ Ver menu com tudo      │ menu_principal.py                   │
+└────────────────────────┴──────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════
+
+✅ TODOS OS SISTEMAS ESTÃO AQUI E FUNCIONANDO!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Total de sistemas: 6
+Total de arquivos: 20+
+Total de linhas: 10,000+
+
+Status: ✅ Funcionando
+Testes: ✅ Aprovados
+GitHub: ✅ Commitado
+
+═══════════════════════════════════════════════════════════════════
+
+🚀 COMECE AGORA!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    python menu_principal.py
+
+E escolha o sistema que quer usar!
+
+═══════════════════════════════════════════════════════════════════
