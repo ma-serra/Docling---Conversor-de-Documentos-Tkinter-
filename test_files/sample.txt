@@ -1,0 +1,21 @@
+Documento de Teste - Conversor Docling
+
+Este é um documento de teste para o Docling Document Converter.
+
+Funcionalidades Principais:
+- Conversão de documentos
+- Suporte a múltiplos formatos
+- Interface moderna e intuitiva
+- Exportação para Markdown e JSON
+
+Tecnologias Utilizadas:
+1. Python
+2. Tkinter (GUI)
+3. Docling (biblioteca de conversão)
+4. PyTorch (machine learning)
+
+Seção de Conclusão:
+Este conversor permite transformar diversos tipos de documentos em formatos estruturados,
+facilitando a análise e processamento de conteúdo textual.
+
+Para mais informações, visite: https://github.com/docling

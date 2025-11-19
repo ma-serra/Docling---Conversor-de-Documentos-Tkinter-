@@ -1,0 +1,80 @@
+{
+  "document": {
+    "name": "sample.md",
+    "type": ".md",
+    "sections": [
+      {
+        "level": 1,
+        "title": "Guia de Uso do Docling Converter",
+        "content": []
+      },
+      {
+        "level": 2,
+        "title": "Introdução",
+        "content": [
+          "O **Docling Document Converter** é uma ferramenta poderosa para conversão de documentos."
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Características",
+        "content": []
+      },
+      {
+        "level": 3,
+        "title": "Formatos Suportados",
+        "content": [
+          "- **Entrada**: PDF, DOCX, TXT, MD, HTML, RTF",
+          "- **Saída**: Markdown, JSON"
+        ]
+      },
+      {
+        "level": 3,
+        "title": "Interface",
+        "content": [
+          "A interface conta com:",
+          "1. Seleção de arquivos",
+          "2. Escolha de formato de saída",
+          "3. Visualização de progresso",
+          "4. Preview do resultado"
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Exemplo de Código",
+        "content": [
+          "```python",
+          "from docling.document_converter import DocumentConverter",
+          "converter = DocumentConverter()",
+          "result = converter.convert(\"document.pdf\")",
+          "```"
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Tabela de Recursos",
+        "content": [
+          "| Recurso | Disponível | Descrição |",
+          "|---------|------------|-----------|",
+          "| Conversão PDF | ✅ | Extração de texto e layout |",
+          "| Conversão DOCX | ✅ | Suporte completo |",
+          "| Batch Processing | 🔄 | Em desenvolvimento |"
+        ]
+      },
+      {
+        "level": 2,
+        "title": "Links Úteis",
+        "content": [
+          "- [Documentação](https://docling.readthedocs.io)",
+          "- [GitHub](https://github.com/docling)",
+          "- [PyPI](https://pypi.org/project/docling)",
+          "---",
+          "*Última atualização: 2025*"
+        ]
+      }
+    ],
+    "total_sections": 8,
+    "total_lines": 49,
+    "total_characters": 994
+  }
+}
