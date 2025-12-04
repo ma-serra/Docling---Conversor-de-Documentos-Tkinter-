@@ -6,3 +6,4 @@ json
 threading
 os
 docling
+Pillow
