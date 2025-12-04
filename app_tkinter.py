@@ -8,7 +8,7 @@ from docling.document_converter import DocumentConverter
 class ModernDoclingConverterApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Docling - Document Converter")
+        self.root.title("Docling - Conversor de Documentos")
         self.root.geometry("1100x750")
         self.root.minsize(900, 600)
 
@@ -69,14 +69,14 @@ class ModernDoclingConverterApp:
         header_frame = ttk.Frame(parent, style='Main.TFrame')
         header_frame.pack(fill=tk.X, pady=(0, 20))
         
-        title = ttk.Label(header_frame, text="Docling Document Converter", style='Header.TLabel')
+        title = ttk.Label(header_frame, text="Conversor de Documentos Docling", style='Header.TLabel')
         title.pack(side=tk.LEFT)
         
-        supported_formats = ttk.Label(header_frame, text="Supported Formats: PDF, DOCX, TXT, MD, HTML, RTF", style='Info.TLabel')
+        supported_formats = ttk.Label(header_frame, text="Formatos Suportados: PDF, DOCX, TXT, MD, HTML, RTF", style='Info.TLabel')
         supported_formats.pack(side=tk.RIGHT, pady=10)
 
     def create_control_panel(self, parent):
-        control_frame = ttk.LabelFrame(parent, text="Controls", style='Main.TLabelframe', padding=15)
+        control_frame = ttk.LabelFrame(parent, text="Controles", style='Main.TLabelframe', padding=15)
         control_frame.pack(side=tk.LEFT, fill=tk.BOTH, padx=(0, 10))
         
         # File Selection
@@ -87,7 +87,7 @@ class ModernDoclingConverterApp:
         self.file_entry = ttk.Entry(file_frame, textvariable=self.file_path, width=40)
         self.file_entry.pack(side=tk.LEFT, padx=(0, 10))
         
-        browse_btn = ttk.Button(file_frame, text="Browse", style='Primary.TButton', command=self.browse_file)
+        browse_btn = ttk.Button(file_frame, text="Procurar", style='Primary.TButton', command=self.browse_file)
         browse_btn.pack(side=tk.LEFT)
         
         # Conversion Options
@@ -97,12 +97,12 @@ class ModernDoclingConverterApp:
         self.create_progress_section(control_frame)
 
     def create_conversion_options(self, parent):
-        options_frame = ttk.LabelFrame(parent, text="Options", style='Main.TLabelframe', padding=10)
+        options_frame = ttk.LabelFrame(parent, text="Opções", style='Main.TLabelframe', padding=10)
         options_frame.pack(fill=tk.X, pady=(0, 15))
         
         # Output format
         self.output_format = tk.StringVar(value="markdown")
-        ttk.Label(options_frame, text="Output Format:", style='Info.TLabel').pack(anchor=tk.W)
+        ttk.Label(options_frame, text="Formato de Saída:", style='Info.TLabel').pack(anchor=tk.W)
         
         formats_frame = ttk.Frame(options_frame, style='Card.TFrame')
         formats_frame.pack(fill=tk.X, pady=5)
@@ -117,25 +117,25 @@ class ModernDoclingConverterApp:
         self.progress = ttk.Progressbar(progress_frame, orient=tk.HORIZONTAL, length=200, mode='determinate')
         self.progress.pack(fill=tk.X, pady=(0, 5))
         
-        self.status_var = tk.StringVar(value="Ready to convert")
+        self.status_var = tk.StringVar(value="Pronto para converter")
         status_label = ttk.Label(progress_frame, textvariable=self.status_var, style='Info.TLabel')
         status_label.pack(fill=tk.X)
         
-        convert_btn = ttk.Button(parent, text="Convert Document", style='Primary.TButton', command=self.start_conversion)
+        convert_btn = ttk.Button(parent, text="Converter Documento", style='Primary.TButton', command=self.start_conversion)
         convert_btn.pack(fill=tk.X, pady=(0, 10))
 
-        save_btn = ttk.Button(parent, text="Save Converted Document", style='Primary.TButton', command=self.save_document)
+        save_btn = ttk.Button(parent, text="Salvar Documento Convertido", style='Primary.TButton', command=self.save_document)
         save_btn.pack(fill=tk.X, pady=(0, 10))
 
     def create_results_panel(self, parent):
-        results_frame = ttk.LabelFrame(parent, text="Results", style='Main.TLabelframe', padding=15)
+        results_frame = ttk.LabelFrame(parent, text="Resultados", style='Main.TLabelframe', padding=15)
         results_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         
         # Converted Text Panel
         text_frame = ttk.Frame(results_frame, style='Card.TFrame')
         text_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
         
-        ttk.Label(text_frame, text="Converted Document:", style='Info.TLabel').pack(anchor=tk.W, padx=5, pady=5)
+        ttk.Label(text_frame, text="Documento Convertido:", style='Info.TLabel').pack(anchor=tk.W, padx=5, pady=5)
         
         self.output_text = tk.Text(text_frame, wrap=tk.WORD, bg=self.colors['bg_light'], fg=self.colors['text'])
         self.output_text.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
@@ -144,7 +144,7 @@ class ModernDoclingConverterApp:
         metadata_frame = ttk.Frame(results_frame, style='Card.TFrame')
         metadata_frame.pack(side=tk.LEFT, fill=tk.BOTH, padx=(10, 0))
         
-        ttk.Label(metadata_frame, text="Metadata:", style='Info.TLabel').pack(anchor=tk.W, padx=5, pady=5)
+        ttk.Label(metadata_frame, text="Metadados:", style='Info.TLabel').pack(anchor=tk.W, padx=5, pady=5)
         
         self.metadata_text = tk.Text(metadata_frame, wrap=tk.WORD, bg=self.colors['bg_light'], fg=self.colors['text'])
         self.metadata_text.pack(side=tk.LEFT, fill=tk.BOTH)
@@ -154,19 +154,19 @@ class ModernDoclingConverterApp:
             ('PDF files', '*.pdf'),
             ('All files', '*.*')
         )
-        filename = filedialog.askopenfilename(title="Open Document", filetypes=filetypes)
+        filename = filedialog.askopenfilename(title="Abrir Documento", filetypes=filetypes)
         if filename:
             self.file_path.set(filename)
 
     def start_conversion(self):
         if not self.file_path.get():
-            messagebox.showerror("Error", "Please select a file.")
+            messagebox.showerror("Erro", "Por favor, selecione um arquivo.")
             return
         threading.Thread(target=self.convert_document, daemon=True).start()
 
     def convert_document(self):
         try:
-            self.update_progress(0, "Starting conversion...")
+            self.update_progress(0, "Iniciando conversão...")
             result = self.converter.convert(self.file_path.get())
             
             # Choose output format
@@ -175,12 +175,12 @@ class ModernDoclingConverterApp:
             else:
                 converted_text = result.document.export_to_json()
 
-            self.update_progress(100, "Conversion completed")
+            self.update_progress(100, "Conversão concluída")
             self.display_results(converted_text, result)
 
         except Exception as e:
-            self.update_progress(0, "Conversion error")
-            messagebox.showerror("Conversion Error", str(e))
+            self.update_progress(0, "Erro na conversão")
+            messagebox.showerror("Erro de Conversão", str(e))
 
     def update_progress(self, value, status):
         self.progress['value'] = value
@@ -191,8 +191,8 @@ class ModernDoclingConverterApp:
         self.output_text.insert(tk.END, converted_text)
         
         metadata = {
-            "Filename": os.path.basename(self.file_path.get()),
-            "Attributes": dir(result.document)
+            "Nome do Arquivo": os.path.basename(self.file_path.get()),
+            "Atributos": dir(result.document)
         }
         self.metadata_text.delete(1.0, tk.END)
         self.metadata_text.insert(tk.END, json.dumps(metadata, indent=4))
@@ -209,9 +209,9 @@ class ModernDoclingConverterApp:
                     else:
                         json_data = json.loads(self.output_text.get(1.0, tk.END))
                         json.dump(json_data, f, ensure_ascii=False, indent=4)
-                messagebox.showinfo("Success", "Document saved successfully.")
+                messagebox.showinfo("Sucesso", "Documento salvo com sucesso.")
             except Exception as e:
-                messagebox.showerror("Save Error", str(e))
+                messagebox.showerror("Erro ao Salvar", str(e))
 
 if __name__ == "__main__":
     root = tk.Tk()
