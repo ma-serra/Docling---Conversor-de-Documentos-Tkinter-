@@ -1,5 +1,6 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
+from PIL import Image, ImageTk
 import json
 import threading
 import os
@@ -68,6 +69,23 @@ class ModernDoclingConverterApp:
     def create_header(self, parent):
         header_frame = ttk.Frame(parent, style='Main.TFrame')
         header_frame.pack(fill=tk.X, pady=(0, 20))
+        
+        # Load and display logo
+        try:
+            script_dir = os.path.dirname(os.path.abspath(__file__))
+            logo_path = os.path.join(script_dir, "DOCLING.png")
+            logo_image = Image.open(logo_path)
+            # Resize logo to fit header (height ~50px)
+            logo_height = 50
+            aspect_ratio = logo_image.width / logo_image.height
+            logo_width = int(logo_height * aspect_ratio)
+            logo_image = logo_image.resize((logo_width, logo_height), Image.Resampling.LANCZOS)
+            self.logo_photo = ImageTk.PhotoImage(logo_image)
+            
+            logo_label = ttk.Label(header_frame, image=self.logo_photo, background=self.colors['bg_dark'])
+            logo_label.pack(side=tk.LEFT, padx=(0, 15))
+        except Exception as e:
+            pass  # If logo fails to load, continue without it
         
         title = ttk.Label(header_frame, text="Conversor de Documentos Docling", style='Header.TLabel')
         title.pack(side=tk.LEFT)
